@@ -19,7 +19,10 @@ const MyChats = ({fetchAgain}) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get(
+        "https://chat-app-backend-theta-ashy.vercel.app/api/chat",
+        config
+      );
       
       setChats(data);
     } catch (error) {

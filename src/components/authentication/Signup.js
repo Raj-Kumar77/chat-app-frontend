@@ -101,7 +101,11 @@ const Signup = () => {
                 "Content-Type": "application/json"
             }
         }
-        const {data} = await axios.post('/api/user',{name,email,password,pic},config)
+        const { data } = await axios.post(
+          "https://chat-app-backend-theta-ashy.vercel.app/api/user",
+          { name, email, password, pic },
+          config
+        );
         toast({
           title: "Registration Successful",
           status: "success",

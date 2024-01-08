@@ -43,7 +43,7 @@ const Login = () => {
             },
           };
           const { data } = await axios.post(
-            "/api/user/login",
+            "https://chat-app-backend-theta-ashy.vercel.app/api/user/login",
             { email, password },
             config
           );
